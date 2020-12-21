@@ -13,23 +13,24 @@ The program needs to tell us if that element exists or not.
 If true, show us its index. 
 
 */
-
-var numeros = [];
+//1. We add the 6 numbers to the array
+var numbers = [];
 
 do {
-  var newNumber = parseInt(prompt("Give me a number!"));
-  numeros.push(newNumber);
-} while (numeros.length <= 5);
-{
-  console.log(numeros);
-  for (var i = 0; i < numeros.length; i++) {
-    document.write(numeros[i] + "<br>");
-  }
-}
+  var newNumber = parseInt(prompt("Give me a number"));
+  numbers.push(newNumber);
+} while (numbers.length <= 5);
+
+console.log(numbers);
+
+// 3. We show the array in order
+numbers.forEach((numero, index) => {
+  document.write(numero + "<br>");
+});
 
 // ordenar los elementos del array:
-console.log(numeros.sort());
+console.log(numbers.sort());
 
 // invertir el orden de los elementos:
 
-console.log(numeros.reverse());
+console.log(numbers.reverse());
