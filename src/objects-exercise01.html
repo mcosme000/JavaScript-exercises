@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes. JS objects</title>
+  </head>
+  <body>
+    <script>
+      // - - - SHOW THE COUNTRIES INSIDE THE OBJECT THAT SPEAK ENGLISH - - - //
+
+      var countries = [
+        {
+          name: "Japan",
+          englishSpeaking: false,
+        },
+        {
+          name: "England",
+          englishSpeaking: true,
+        },
+        {
+          name: "Spain",
+          englishSpeaking: false,
+        },
+        {
+          name: "Australia",
+          englishSpeaking: true,
+        },
+      ];
+
+      console.log(`A list of countries: `);
+
+      for (var i = 0; i < countries.length; i++) {
+        if (countries[i].englishSpeaking == true) {
+          console.log(
+            `In ${countries[i].name} the official language is English.`
+          );
+        } else {
+          if (countries[i].englishSpeaking == false) {
+            console.log(
+              `In ${countries[i].name} English is not the official language`
+            );
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
